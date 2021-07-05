@@ -115,12 +115,11 @@
         opacity: 1;
         transition: all 0.5s ease;
         z-index: -1;
-
+        background: #131313;
     }
 
-    .navbar__menu.active{
-        background: #131313;
-        top: 100%;
+    .navbar__menu .active{
+        top: 0;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
@@ -133,7 +132,7 @@
 
     }
 
-    .navbar__toggle.bar{
+    .navbar__toggle .bar{
         width: 25px;
         height: 3px;
         margin: 5px auto;
@@ -170,9 +169,25 @@
         position: absolute;
         top: 20%;
         right: 5%;
-        transform: ;
+        transform: translate(5%, 20%);
     }
 
+    .navbar__toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translate(8px) rotate(45deg);
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translate(-8px) rotate(-45deg);
+    }
 
     
 }
